@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xk7-mG-gbc">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,26 +13,29 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Day4ClassExercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc" id="BYZ-38-t0r" customClass="ViewController" customModule="Day4ClassExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vks-C0-caa">
-                                <rect key="frame" x="10" y="244" width="394" height="30"/>
+                                <rect key="frame" x="10" y="288" width="394" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvV-0v-DMi">
-                                <rect key="frame" x="180" y="324" width="54" height="21"/>
+                                <rect key="frame" x="20" y="368" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aae-zr-vKV">
-                                <rect key="frame" x="170" y="395" width="74" height="30"/>
+                                <rect key="frame" x="170" y="439" width="74" height="30"/>
                                 <state key="normal" title="Perform"/>
+                                <connections>
+                                    <segue destination="nc8-Cg-7tg" kind="show" id="CFV-Y6-m8F"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,7 +43,7 @@
                             <constraint firstItem="aae-zr-vKV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="34f-b2-sEM"/>
                             <constraint firstItem="PvV-0v-DMi" firstAttribute="top" secondItem="Vks-C0-caa" secondAttribute="bottom" constant="50" id="4Gv-1t-1fn"/>
                             <constraint firstItem="aae-zr-vKV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="Clc-cJ-ytm"/>
-                            <constraint firstItem="PvV-0v-DMi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="180" id="Eft-GZ-cPR"/>
+                            <constraint firstItem="PvV-0v-DMi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Eft-GZ-cPR"/>
                             <constraint firstItem="Vks-C0-caa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eg3-lw-Exa"/>
                             <constraint firstItem="PvV-0v-DMi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GHu-WY-36G"/>
                             <constraint firstItem="aae-zr-vKV" firstAttribute="top" secondItem="PvV-0v-DMi" secondAttribute="bottom" constant="50" id="Ghs-gp-3pD"/>
@@ -49,40 +52,60 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="NWm-Op-Sre"/>
+                    <connections>
+                        <outlet property="btnPerform" destination="aae-zr-vKV" id="bXK-PX-UYk"/>
+                        <outlet property="lblShowResult" destination="PvV-0v-DMi" id="VxV-Wm-bus"/>
+                        <outlet property="txtEnterInput" destination="Vks-C0-caa" id="g7T-aW-Sm3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
-        <!--OptionsVC-->
+        <!--Options-->
         <scene sceneID="rUt-6j-Vqd">
             <objects>
-                <viewController title="OptionsVC" id="nc8-Cg-7tg" customClass="OptionsViewController" customModule="Day4ClassExercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OptionsVC" title="Options" id="nc8-Cg-7tg" customClass="OptionsViewController" customModule="Day4ClassExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dbb-k1-5Mi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQO-Gp-9Tj">
-                                <rect key="frame" x="10" y="194" width="394" height="30"/>
+                                <rect key="frame" x="10" y="238" width="394" height="30"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="UPPER CASE"/>
+                                <connections>
+                                    <action selector="btnUpperCase:" destination="nc8-Cg-7tg" eventType="touchUpInside" id="1G7-Iy-Pgv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGO-OQ-mVJ">
-                                <rect key="frame" x="10" y="254" width="394" height="30"/>
+                                <rect key="frame" x="10" y="298" width="394" height="30"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="lower case"/>
+                                <connections>
+                                    <action selector="btnLowerCase:" destination="nc8-Cg-7tg" eventType="touchUpInside" id="Hrn-WR-fK8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE3-JE-h95">
-                                <rect key="frame" x="10" y="314" width="394" height="30"/>
+                                <rect key="frame" x="10" y="358" width="394" height="30"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Change font to red">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnRedFont:" destination="nc8-Cg-7tg" eventType="touchUpInside" id="qqG-Y5-Naj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dn5-bt-JXL">
-                                <rect key="frame" x="10" y="374" width="394" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Change background to red"/>
+                                <rect key="frame" x="10" y="418" width="394" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Change background to blue">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBlueBG:" destination="nc8-Cg-7tg" eventType="touchUpInside" id="5Xh-4p-WC1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,10 +125,31 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wm6-dP-CkF"/>
                     </view>
+                    <connections>
+                        <outlet property="btnUpper" destination="yQO-Gp-9Tj" id="lur-uZ-X2w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QDl-47-HRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="130"/>
+            <point key="canvasLocation" x="1928.985507246377" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i0T-jv-evM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xk7-mG-gbc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bqo-6s-yeT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HlS-1b-h8B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Xu-my-xnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
 </document>
