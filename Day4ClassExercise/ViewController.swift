@@ -34,10 +34,8 @@ class ViewController: UIViewController {
         case 2:
             self.lblShowResult.text = self.txtEnterInput.text?.lowercased()
         case 3:
-            self.lblShowResult.text = self.txtEnterInput.text!
             self.lblShowResult.textColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
         case 4:
-            self.lblShowResult.text = self.txtEnterInput.text!
             self.lblShowResult.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         case 5:
             self.lblShowResult.text = "Result"
