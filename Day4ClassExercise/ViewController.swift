@@ -39,9 +39,15 @@ class ViewController: UIViewController {
         case 4:
             self.lblShowResult.text = self.txtEnterInput.text!
             self.lblShowResult.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        case 5:
+            self.lblShowResult.text = "Result"
+            self.lblShowResult.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            self.lblShowResult.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             
         default:
             self.lblShowResult.text = "Result"
+            self.lblShowResult.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            self.lblShowResult.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
         
     }

@@ -42,6 +42,12 @@ class OptionsViewController: UIViewController {
         ViewController.option = 4
     }
     
+    @IBAction func btnClear(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+        ViewController.option = 5
+    }
+    
+    
     /*
     // MARK: - Navigation
 

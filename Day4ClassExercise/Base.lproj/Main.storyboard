@@ -107,6 +107,14 @@
                                     <action selector="btnBlueBG:" destination="nc8-Cg-7tg" eventType="touchUpInside" id="5Xh-4p-WC1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWf-hH-xbS">
+                                <rect key="frame" x="10" y="478" width="394" height="30"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="btnClear:" destination="nc8-Cg-7tg" eventType="touchUpInside" id="598-gw-kCx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -117,7 +125,10 @@
                             <constraint firstItem="Dn5-bt-JXL" firstAttribute="top" secondItem="kE3-JE-h95" secondAttribute="bottom" constant="30" id="FiJ-aT-du0"/>
                             <constraint firstItem="LGO-OQ-mVJ" firstAttribute="top" secondItem="yQO-Gp-9Tj" secondAttribute="bottom" constant="30" id="GNh-LQ-zq4"/>
                             <constraint firstItem="LGO-OQ-mVJ" firstAttribute="centerX" secondItem="Dbb-k1-5Mi" secondAttribute="centerX" id="MDv-ON-Xmo"/>
+                            <constraint firstItem="iWf-hH-xbS" firstAttribute="leading" secondItem="wm6-dP-CkF" secondAttribute="leading" constant="10" id="PXI-BG-jOb"/>
                             <constraint firstItem="Dn5-bt-JXL" firstAttribute="leading" secondItem="wm6-dP-CkF" secondAttribute="leading" constant="10" id="V66-E8-CAM"/>
+                            <constraint firstItem="iWf-hH-xbS" firstAttribute="centerX" secondItem="Dbb-k1-5Mi" secondAttribute="centerX" id="V71-TJ-nnx"/>
+                            <constraint firstItem="iWf-hH-xbS" firstAttribute="top" secondItem="Dn5-bt-JXL" secondAttribute="bottom" constant="30" id="Yv3-B8-cph"/>
                             <constraint firstItem="yQO-Gp-9Tj" firstAttribute="centerX" secondItem="Dbb-k1-5Mi" secondAttribute="centerX" id="btP-dh-1eG"/>
                             <constraint firstItem="yQO-Gp-9Tj" firstAttribute="leading" secondItem="wm6-dP-CkF" secondAttribute="leading" constant="10" id="esR-5y-0fg"/>
                             <constraint firstItem="yQO-Gp-9Tj" firstAttribute="top" secondItem="wm6-dP-CkF" secondAttribute="top" constant="150" id="o0W-eU-U80"/>
